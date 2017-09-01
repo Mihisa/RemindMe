@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/menu_item_notification"
+        android:orderInCategory="1"
+        android:icon="@drawable/remind"
+        />
+    <item
+        android:title="@string/favorites"
+        android:orderInCategory="1"
+        android:icon="@drawable/magnify"
+        />
+    <item
+        android:title="@string/archive"
+        android:orderInCategory="1"
+        android:icon="@drawable/magnify"
+        />
+    <item
+        android:title="@string/settings"
+        android:orderInCategory="1"
+        android:icon="@drawable/magnify"
+        />
+    <item
+        android:title="@string/help"
+        android:orderInCategory="1"
+        android:icon="@drawable/magnify"
+        />
+</menu>

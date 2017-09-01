@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">RemindMe</string>
     <string name="search_title">Search</string>
+    <string name="menu_item_notification">Напоминание</string>
+    <string name="favorites">Избранное</string>
+    <string name="archive">Архив</string>
+    <string name="settings">Настройки</string>
+    <string name="help">Справка</string>
 
 </resources>
