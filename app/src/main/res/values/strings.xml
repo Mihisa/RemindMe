@@ -6,5 +6,7 @@
     <string name="archive">Архив</string>
     <string name="settings">Настройки</string>
     <string name="help">Справка</string>
+    <string name="view_navigation_open">Open</string>
+    <string name="view_navigation_closed">Close</string>
 
 </resources>
