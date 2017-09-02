@@ -9,4 +9,12 @@
     <string name="view_navigation_open">Open</string>
     <string name="view_navigation_closed">Close</string>
 
+    <string name="tab_item_history">History</string>
+    <string name="tab_item_ideas">Ideas</string>
+    <string name="tab_item_todo">To do</string>
+    <string name="tab_item_birthdays">Birthdays</string>
+
+    <string name="title_activity_main2">Delete</string>
+
+
 </resources>

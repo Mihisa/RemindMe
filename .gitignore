@@ -1,11 +1,6 @@
 .gradle
+.idea
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
 /build
 RemindMe.iml
-app/app.iml
-app/libs/
-app/src/main/res/drawable/
-.idea/dbnavigator.xml
