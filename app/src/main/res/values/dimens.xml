@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="history_padding">5dp</dimen>
+    <dimen name="fragment_margin_LR">12dp</dimen>
 </resources>
