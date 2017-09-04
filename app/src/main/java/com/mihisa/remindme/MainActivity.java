@@ -94,21 +94,22 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setCurrentItem(Constants.TAB_TWO);
     }
 
-//    private class RemindMeTask extends AsyncTask<Void, Void, RemindDTO> {
-//
-//        @Override
-//        protected RemindDTO doInBackground(Void... voids) {
-//            RestTemplate template = new RestTemplate();
-//            template.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-//
-//            return template.getForObject(Constants.URL.GET_REMIND_ITEM, RemindDTO.class);
-//        }
-//
-//        @Override
-//        protected void onPostExecute(RemindDTO remindDTO) {
-//            List<RemindDTO> list = new ArrayList<>();
-//            list.add(remindDTO);
-//            adapter.setData(list);
-//        }
-//    }
+    private class RemindMeTask extends AsyncTask<Void, Void, RemindDTO> {
+
+        @Override
+        protected RemindDTO doInBackground(Void... voids) {
+            RestTemplate template = new RestTemplate();
+            template.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+
+            return template.getForObject(Constants.URL.GET_REMIND_ITEM, RemindDTO.class);
+
+        }
+
+        @Override
+        protected void onPostExecute(RemindDTO remindDTO) {
+            List<RemindDTO> list = new ArrayList<>();
+            list.add(remindDTO);
+            adapter.setData(list);
+        }
+    }
 }

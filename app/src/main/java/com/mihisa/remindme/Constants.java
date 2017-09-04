@@ -11,6 +11,7 @@ public class Constants {
 
     public static class URL {
         private static final String HOST = "http://192.168.52.32:8088";
-        public static final String GET_REMIND_ITEM = HOST + "/reminders/3";
+        public static final String GET_REMIND_ITEM = HOST + "/reminders/1";
+        public static final String GET_REMIND_ITEM2 = HOST + "/reminders/2";
     }
 }

@@ -10,9 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 
+import com.mihisa.remindme.Constants;
 import com.mihisa.remindme.R;
 import com.mihisa.remindme.adapter.RemindListAdapter;
 import com.mihisa.remindme.dto.RemindDTO;
+
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +65,7 @@ public class HistoryFragment extends AbstractTabFragment {
     }
 
     private List<RemindDTO> createMockRemindLIstData() {
+
         List<RemindDTO> data = new ArrayList<>();
         data.add(new RemindDTO("Item 1"));
         data.add(new RemindDTO("Item 2"));
