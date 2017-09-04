@@ -6,8 +6,8 @@
         android:title="@string/search_title"
         android:orderInCategory="1"
         android:icon="@drawable/magnify"
-        app:showAsAction="ifRoom"
-        android:onClick="onClickSearch"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
         />
 
 </menu>
