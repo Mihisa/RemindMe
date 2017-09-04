@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-  //      new RemindMeTask().execute();
+
+ //       new RemindMeTask().execute();
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
