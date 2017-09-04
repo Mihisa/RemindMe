@@ -2,6 +2,7 @@ package com.mihisa.remindme;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -10,14 +11,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
+import com.mihisa.remindme.adapter.RemindListAdapter;
 import com.mihisa.remindme.adapter.TabsFragmentAdapter;
 import com.mihisa.remindme.dto.RemindDTO;
+import com.mihisa.remindme.fragment.HistoryFragment;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,9 +45,23 @@ public class MainActivity extends AppCompatActivity {
         initToolbar();
         initNavigationView();
         initTabs();
+        initFab();
 
 
+    }
 
+    private void initFab() {
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Add new Idea!", Toast.LENGTH_LONG).show();
+                RemindDTO test = new RemindDTO("Testing 1-2-3");
+                RemindListAdapter adapter = new RemindListAdapter(test);
+                adapter.setDataOne(test);
+                initTabs();
+            }
+        });
     }
 
     private void initToolbar() {
@@ -92,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void showNotificationTab() {
         viewPager.setCurrentItem(Constants.TAB_TWO);
+    }
+
+    public void onClickSearch(MenuItem item) {
     }
 
     private class RemindMeTask extends AsyncTask<Void, Void, RemindDTO> {

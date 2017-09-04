@@ -19,9 +19,15 @@ import java.util.List;
 public class RemindListAdapter extends RecyclerView.Adapter<RemindListAdapter.RemindViewHolder> {
 
     private List<RemindDTO> data;
+    private RemindDTO dataOne;
 
     public RemindListAdapter(List<RemindDTO> data) {
+
         this.data = data;
+    }
+
+    public RemindListAdapter(RemindDTO dataOne) {
+        this.dataOne = dataOne;
     }
 
     @Override
@@ -58,4 +64,7 @@ public class RemindListAdapter extends RecyclerView.Adapter<RemindListAdapter.Re
         this.data = data;
     }
 
+    public void setDataOne(RemindDTO dataOne) {
+        this.dataOne = dataOne;
+    }
 }
